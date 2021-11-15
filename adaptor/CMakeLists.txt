@@ -11,7 +11,6 @@ qt5_add_dbus_adaptor(
     test.h
     test
     valueAdaptor
-    
 )
 
 include_directories(../qdbus)
