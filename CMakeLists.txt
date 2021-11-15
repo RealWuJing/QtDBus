@@ -9,6 +9,14 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 find_package(Qt5 REQUIRED COMPONENTS Core DBus)
 
+message(${Qt5DBus_INCLUDE_DIRS})
+message(${CMAKE_CURRENT_LIST_LINE})
+foreach(dir ${Qt5DBus_INCLUDE_DIRS})
+  message(STATUS "dir='${dir}'")
+endforeach()
+message(${CMAKE_CURRENT_LIST_LINE})
+message(${Qt5DBus_LIBRARIES})
+
 add_subdirectory(qdbus)
 
 add_subdirectory(service)
