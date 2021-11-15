@@ -5,15 +5,11 @@ message(${CMAKE_CURRENT_BINARY_DIR})
 
 set(CMAKE_AUTOMOC ON)
 
-set(CPACK_PROJECT_NAME ${PROJECT_NAME})
-
-set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
-
-include(CPack)
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 find_package(Qt5 REQUIRED COMPONENTS Core DBus)
 
-# add_subdirectory(qdbus)
+add_subdirectory(qdbus)
 
 add_subdirectory(service)
 
@@ -24,3 +20,5 @@ add_subdirectory(interface)
 add_subdirectory(proxy)
 
 add_subdirectory(adaptor)
+
+# add_subdirectory(test_dbus_module)

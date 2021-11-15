@@ -38,3 +38,11 @@ qdbusxml2cpp com.scorpio.test.xml -i test.h -a valueAdaptor
 ## 方式三、从D-Bus XML自动生成Proxy类，调用Proxy类访问Service
 
 代码位于目录proxy下，建议先阅读该目录下的README.md。
+
+/data/opt/Qt5.6.3/5.6.3/gcc_64/lib/cmake/Qt5DBus/Qt5DBusMacros.cmake:87:function(QT5_GENERATE_DBUS_INTERFACE _header) # _customName OPTIONS -some -options )
+
+/data/opt/Qt5.6.3/5.6.3/Src/qtbase/src/dbus/Qt5DBusMacros.cmake:87:function(QT5_GENERATE_DBUS_INTERFACE _header) # _customName OPTIONS -some -options )
+
+/data/opt/Qt5.6.3/5.6.3/Src/qtbase/tests/auto/cmake/test_dbus_module/CMakeLists.txt:22:qt5_generate_dbus_interface(
+    
+/data/opt/Qt5.6.3/5.6.3/Src/qtdoc/doc/src/development/cmake-manual.qdoc:249:    \row \li qt5_generate_dbus_interface( header [interfacename] OPTIONS ...)
