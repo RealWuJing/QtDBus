@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "qdbuserror": "cpp",
+        "qdebug": "cpp",
+        "qcoreapplication": "cpp",
+        "qdbusconnection": "cpp"
+    }
+}

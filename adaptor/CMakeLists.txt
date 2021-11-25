@@ -22,13 +22,13 @@ message(${CMAKE_CURRENT_LIST_LINE})
 
 get_property(dirs DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY INCLUDE_DIRECTORIES)
 foreach(dir ${dirs})
-  message(STATUS "dir='${dir}'")
+  message(STATUS "${CMAKE_CURRENT_LIST_LINE} dir='${dir}'")
 endforeach()
 
 message(${CMAKE_CURRENT_LIST_LINE})
 
 foreach(_var ${QDBUS_ADAPTOR_SRCS})
-	message("当前变量是：${_var}")
+	message("${CMAKE_CURRENT_LIST_LINE} 当前变量是：${_var}")
 endforeach()
 
 message(${CMAKE_CURRENT_LIST_LINE})
