@@ -6,6 +6,8 @@
 
 int main(int argc, char *argv[])
 {
+    qSetMessagePattern("[%{type}] DateTime:%{time [yyyy-MM-dd hh:mm:ss ddd]} File:%{file} Line:%{line} Function:%{function} Message:%{message}");
+
     qInfo() << "start";
 
     QCoreApplication a(argc, argv);
