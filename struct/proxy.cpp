@@ -18,13 +18,19 @@ int main(int argc, char *argv[])
                                    "/test/objects",
                                    QDBusConnection::sessionBus());
     // 调用value方法
-    QDBusPendingReply<Book> reply = test.book();
+    QDBusPendingReply<Book, qlonglong> reply = test.book();
     //qdbusxml2cpp生成的Proxy类是采用异步的方式来传递Message，
     //所以需要调用waitForFinished来等到Message执行完成
     reply.waitForFinished();
     if (reply.isValid())
     {
-        Book book = reply.value();
+        QVariant qVariant = reply.argumentAt(0);
+        const QDBusArgument qDBusArgument = qVariant.value<QDBusArgument>();
+        Book book;
+        qDBusArgument.beginStructure();
+        qDBusArgument >> book.name >> book.page >> book.author;
+        qDBusArgument.endStructure();
+        
         qDebug() << QString("book.name = %1, book.page = %2, book.author = %3").arg(book.name).arg(book.page).arg(book.author);
     }
     else

@@ -37,10 +37,19 @@ public:
     ~ComScorpioTestValueInterface();
 
 public Q_SLOTS: // METHODS
-    inline QDBusPendingReply<Book> book()
+    inline QDBusPendingReply<Book, qlonglong> book()
     {
         QList<QVariant> argumentList;
         return asyncCallWithArgumentList(QStringLiteral("book"), argumentList);
+    }
+    inline QDBusReply<Book> book(qlonglong &out1)
+    {
+        QList<QVariant> argumentList;
+        QDBusMessage reply = callWithArgumentList(QDBus::Block, QStringLiteral("book"), argumentList);
+        if (reply.type() == QDBusMessage::ReplyMessage && reply.arguments().count() == 2) {
+            out1 = qdbus_cast<qlonglong>(reply.arguments().at(1));
+        }
+        return reply;
     }
 
     inline QDBusPendingReply<int> maxValue()

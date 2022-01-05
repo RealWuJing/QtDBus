@@ -25,16 +25,16 @@ int test::value()
     return m_value;
 }
 
-// Book test::book(qlonglong &out1)
-// {
-//     out1 = 666;
-//     Book book;
-//     book.name = "qtdbus";
-//     book.page = 888;
-//     book.author = "wujing";
-//     qInfo() << out1 << book.name << book.page << book.author;
-//     return book;
-// }
+Book test::book(qlonglong &out1)
+{
+    out1 = 666;
+    Book book;
+    book.name = "qtdbus";
+    book.page = 888;
+    book.author = "wujing";
+    qInfo() << out1 << book.name << book.page << book.author;
+    return book;
+}
 
 Book test::book()
 {

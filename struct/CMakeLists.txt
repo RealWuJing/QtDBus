@@ -31,13 +31,13 @@ add_executable(proxy proxy.cpp testInterface.cpp test.cpp book.cpp)
 
 target_link_libraries(proxy Qt5::DBus)
 
-add_executable(message message.cpp)
+# add_executable(message message.cpp)
 
-target_link_libraries(message Qt5::DBus)
+# target_link_libraries(message Qt5::DBus)
 
-add_executable(interface interface.cpp test.cpp book.cpp)
+# add_executable(interface interface.cpp test.cpp book.cpp)
 
-target_link_libraries(interface Qt5::DBus)
+# target_link_libraries(interface Qt5::DBus)
 
 
 

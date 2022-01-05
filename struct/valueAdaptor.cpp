@@ -33,10 +33,10 @@ ValueAdaptor::~ValueAdaptor()
     // destructor
 }
 
-Book ValueAdaptor::book()
+Book ValueAdaptor::book(qlonglong &out1)
 {
     // handle method call com.scorpio.test.value.book
-    return parent()->book();
+    return parent()->book(out1);
 }
 
 int ValueAdaptor::maxValue()

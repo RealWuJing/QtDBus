@@ -43,8 +43,9 @@ class ValueAdaptor: public QDBusAbstractAdaptor
 "      <arg direction=\"out\" type=\"i\"/>\n"
 "    </method>\n"
 "    <method name=\"book\">\n"
-"      <arg direction=\"out\" type=\"(sxs)\" name=\"Book\"/>\n"
 "      <annotation value=\"Book\" name=\"org.qtproject.QtDBus.QtTypeName.Out0\"/>\n"
+"      <arg direction=\"out\" type=\"(sxs)\" name=\"Book\"/>\n"
+"      <arg direction=\"out\" type=\"x\"/>\n"
 "    </method>\n"
 "  </interface>\n"
         "")
@@ -57,7 +58,7 @@ public:
 
 public: // PROPERTIES
 public Q_SLOTS: // METHODS
-    Book book();
+    Book book(qlonglong &out1);
     int maxValue();
     int minValue();
     int value();

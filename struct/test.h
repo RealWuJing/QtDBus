@@ -17,7 +17,7 @@ public slots:
     int maxValue();
     int minValue();
     int value();
-    // Book book(qlonglong &out1);
+    Book book(qlonglong &out1);
     Book book();
 private:
     int m_value;
