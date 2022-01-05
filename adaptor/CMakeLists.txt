@@ -40,4 +40,4 @@ add_executable(adaptor ${QDBUS_ADAPTOR_SRCS})
 #     PRIVATE ../qdbus
 # )
 
-target_link_librarieS(adaptor Qt5::DBus) 
+target_link_libraries(adaptor Qt5::DBus) 
