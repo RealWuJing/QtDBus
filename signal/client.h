@@ -10,6 +10,7 @@
 class Client: public QObject
 {
     Q_OBJECT
+    Q_CLASSINFO("D-Bus Interface", "com.citos.test")
 public:
     Client();
 public slots:

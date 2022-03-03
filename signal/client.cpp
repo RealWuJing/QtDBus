@@ -2,6 +2,9 @@
 
 Client::Client()
 {
+    QDBusConnection::sessionBus().unregisterService("com.citos.client");
+    QDBusConnection::sessionBus().registerService("com.citos.client");
+    QDBusConnection::sessionBus().registerObject("/citos/path", this, QDBusConnection ::ExportAllSlots | QDBusConnection ::ExportAllSignals);
     QDBusConnection::sessionBus().connect(QString(), QString("/citos/path"), "com.citos.test", "send_to_client", this, SLOT(client_get(void)));
 }
 

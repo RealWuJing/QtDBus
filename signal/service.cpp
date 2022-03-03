@@ -1,5 +1,7 @@
 #include "service.h"
 
+#include <unistd.h>
+
 Service::Service()
 {
     QDBusConnection::sessionBus().unregisterService("com.citos.service");
@@ -10,6 +12,10 @@ Service::Service()
 void Service::service_get(QString st)
 {
     qInfo() << "Message get from client: " << st;
+    std::thread th1(sleep, 30);
+    th1.detach();
+    qInfo() << "thread detach" << st;
+    
 }
 
 void service_listen()
