@@ -14,6 +14,9 @@ public:
     Service();
 public slots:
     void service_get(QString st);
+    void service_get2(QString st);
+public:
+    static void server2();
 signals:
     void send_to_client(void);
 };

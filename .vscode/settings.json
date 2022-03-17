@@ -4,6 +4,7 @@
         "qdebug": "cpp",
         "qcoreapplication": "cpp",
         "qdbusconnection": "cpp",
-        "system_error": "cpp"
+        "system_error": "cpp",
+        "optional": "cpp"
     }
 }
