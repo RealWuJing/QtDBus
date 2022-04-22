@@ -6,8 +6,6 @@ class Book
 
     friend const QDBusArgument &operator>>(const QDBusArgument &argument, Book &book);
 
-    static void registerMetaType();
-
 public:
     QString name;
     qlonglong page;

@@ -25,10 +25,3 @@ const QDBusArgument &operator>>(const QDBusArgument &argument, Book &book)
 
     return argument;
 }
-
-void Book::registerMetaType()
-{
-    qRegisterMetaType<Book>("Book");
-
-    qDBusRegisterMetaType<Book>();
-}
